@@ -19,7 +19,7 @@ This project is an implementation of the classic **Tetris** game using **React**
 
 1. 📥 Clone the repository:
    ```bash
-   git clone https://github.com/ChengjiePL/TetrisReact.git
+   git clone https://github.com/ChengjiePL/Tetris-Game
    ```
 2. 📂 Navigate to the project directory:
    ```bash
