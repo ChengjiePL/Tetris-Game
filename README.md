@@ -35,16 +35,14 @@ This project is an implementation of the classic **Tetris** game using **React**
    ```
 5. 🌐 Open your browser and go to `localhost`.
 
-## 📌 Project Status
+## 🎮 How to Play
 
-This project is in the early stages of development. Upcoming features include:
+- ⬅️➡️ **Left/Right Arrow Keys**: Move the tetromino left or right.
+- ⬇️ **Down Arrow Key**: Accelerate the fall of the tetromino.
+- ⬆️ **Up Arrow Key**: Rotate the tetromino.
+- ⏬ **Space Bar**: Instantly drop the tetromino to the bottom.
+- ❌ **Q Key**: Quit the game.
 
-- 🔄 Piece collision detection.
-- 🔺 Block rotation and fall mechanics.
-- 🏆 Scoring system.
-- 🎵 Animations and sound effects.
+## 🌍 Live Demo
 
-## 👤 Author
-
-**Chengjie Peng Lin**  
-[GitHub](https://github.com/ChengjiePL)
+You can try the game here: [Live Demo](https://chengjiepl.github.io/TetrisReact)
