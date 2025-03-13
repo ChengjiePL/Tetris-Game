@@ -43,9 +43,9 @@ export const TETROMINOES = {
   },
   T: {
     shape: [
-      [0, 0, 0],
       [1, 1, 1],
       [0, 1, 0],
+      [0, 0, 0],
     ],
     className: `${className} ${className}__t`,
   },
@@ -66,6 +66,18 @@ export const randomTetromino = () => {
   return TETROMINOES[key];
 };
 
+export const rotate = ({ piece, direction }) => {
+  // Transpose rows and columns
+  const newPiece = piece.map((_, index) =>
+    piece.map((column) => column[index]),
+  );
+
+  // Reverse rows to get a rotated matrix
+  if (direction > 0) return newPiece.map((row) => row.reverse());
+
+  return newPiece.reverse();
+};
+
 export const transferToBoard = ({
   className,
   isOccupied,
@@ -73,13 +85,13 @@ export const transferToBoard = ({
   rows,
   shape,
 }) => {
-  shape.forEach((row, rowIndex) => {
-    row.forEach((cell, columnIndex) => {
+  shape.forEach((row, y) => {
+    row.forEach((cell, x) => {
       if (cell) {
         const occupied = isOccupied;
-        const y = rowIndex + position.row;
-        const x = columnIndex + position.column;
-        rows[y][x] = { occupied, className };
+        const _y = y + position.row;
+        const _x = x + position.column;
+        rows[_y][_x] = { occupied, className };
       }
     });
   });

@@ -1,9 +1,11 @@
 .Board {
   margin: 2em auto;
   display: grid;
-  grid-gap: 2px;
-  width: 45vw;
-  height: 45vw;
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1px;
+  width: 100vh;
+  height: 90vh;
   background: #202020;
   border: 10px solid #202020;
   border-radius: 10px;

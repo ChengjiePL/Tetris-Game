@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { randomTetromino, TETROMINOES } from "../logic/Tetrominoes.js";
+import { randomTetromino } from "../logic/Tetrominoes";
 
 const buildPlayer = (previous) => {
   let tetrominoes;

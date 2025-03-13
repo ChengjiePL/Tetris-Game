@@ -2,22 +2,17 @@ import "./Board.css";
 import BoardCell from "../components/BoardCell";
 
 const Board = ({ board }) => {
-  console.log("board", board);
-
   const boardStyles = {
-    gridTemplateColumns: `repeat(${board.size.columns}, 1fr)`,
     gridTemplateRows: `repeat(${board.size.rows}, 1fr)`,
+    gridTemplateColumns: `repeat(${board.size.columns}, 1fr)`,
   };
 
   return (
     <div className="Board" style={boardStyles}>
-      {board.rows.map((row, rowIndex) =>
-        row.map((cell, columnIndex) => {
-          <BoardCell
-            key={columnIndex * board.size.columns + columnIndex}
-            cell={cell}
-          />;
-        }),
+      {board.rows.map((row, y) =>
+        row.map((cell, x) => (
+          <BoardCell key={x * board.size.columns + x} cell={cell} />
+        )),
       )}
     </div>
   );

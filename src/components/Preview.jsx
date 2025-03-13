@@ -10,7 +10,7 @@ import { transferToBoard } from "../logic/Tetrominoes";
 // Components
 import BoardCell from "./BoardCell";
 
-const Preview = ({ index, tetromino }) => {
+const Preview = ({ tetromino, index }) => {
   const { shape, className } = tetromino;
 
   const board = buildBoard({ rows: 4, columns: 4 });
@@ -28,12 +28,9 @@ const Preview = ({ index, tetromino }) => {
   return (
     <div className="Preview" style={style}>
       <div className="Preview-board">
-        {board.rows.map((row, rowIndex) =>
-          row.map((cell, columnIndex) => (
-            <BoardCell
-              key={columnIndex * board.size.columns + columnIndex}
-              cell={cell}
-            />
+        {board.rows.map((row, y) =>
+          row.map((cell, x) => (
+            <BoardCell key={x * board.size.columns + x} cell={cell} />
           )),
         )}
       </div>
