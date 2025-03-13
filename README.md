@@ -45,4 +45,4 @@ This project is an implementation of the classic **Tetris** game using **React**
 
 ## 🌍 Live Demo
 
-You can try the game here: [Live Demo](https://chengjiepl.github.io/TetrisReact)
+You can try the game here: [Live Demo](https://chengjiepl.github.io/Tetris-Game)
